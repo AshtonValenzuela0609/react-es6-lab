@@ -1,17 +1,15 @@
 import React from 'react';
-import UserAPI from './UserAPI';
+
 
 function App() {
-  const isLoggedIn = true;
+  const names = ['Alice','Bob','Charlie'];
+const doubled = names.map(name => name.length * 2);
+console.log('Doubled lengths:', doubled);
 
-  return (
-    <div>
-      <h1>My React App</h1>
-      {isLoggedIn ? <p>Welcome back!</p> : <p>Please log in</p>}
-      <hr />
-      <UserAPI />
-    </div>
-  );
+const person = { name: 'Alice', age: 25 };
+const { name, age } = person;
+console.log('Destructured:', name, age);
+
 }
 
 export default App;
