@@ -1,10 +1,17 @@
-const names = ['Alice','Bob','Charlie'];
-const doubled = names.map(name => name.length * 2);
-console.log('Doubled lengths:', doubled);
+import React from 'react';
+import UserAPI from './UserAPI';
 
-const person = { name: 'Alice', age: 25 };
-const { name, age } = person;
-console.log('Destructured:', name, age);
+function App() {
+  const isLoggedIn = true;
 
-export default App
+  return (
+    <div>
+      <h1>My React App</h1>
+      {isLoggedIn ? <p>Welcome back!</p> : <p>Please log in</p>}
+      <hr />
+      <UserAPI />
+    </div>
+  );
+}
 
+export default App;
